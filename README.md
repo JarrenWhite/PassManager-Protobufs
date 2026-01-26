@@ -6,5 +6,17 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
 
 ```
 /
-└── README.md
+├── README.md
+│
+└── passmanager
+    │
+    ├── common
+    │   │
+    │   └── v0
+    │       └── error.proto
+    │
+    └── user
+        │
+        └── v0
+            └── user.proto
 ```
