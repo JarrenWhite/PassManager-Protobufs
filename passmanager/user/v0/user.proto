@@ -23,31 +23,3 @@ message UserRegisterResponse {
     bytes username_hash = 1;
   }
 }
-
-message UserChangeUsernameRequest {
-  string session_id = 1;
-  int request_number = 2;
-  bytes encrypted_data = 3;
-}
-
-message UserChangeUsernameResponse {
-  bool success = 1;
-
-  oneof result {
-    Success success_data = 2;
-    passmanager.common.v0.Failure failure_data = 3;
-  }
-
-  message Success {
-    string session_id = 1;
-    bytes encrypted_data = 2;
-  }
-}
-
-message UserDeleteRequest {
-
-}
-
-message UserDeleteResponse {
-
-}
