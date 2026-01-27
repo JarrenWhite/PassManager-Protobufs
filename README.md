@@ -18,5 +18,6 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
     └── user
         │
         └── v0
+            ├── user_payloads.proto
             └── user.proto
 ```
