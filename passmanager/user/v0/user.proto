@@ -23,3 +23,12 @@ message UserRegisterResponse {
     bytes username_hash = 1;
   }
 }
+
+message UserChangeUsernameRequest {
+  bytes username_hash = 1;
+  bytes new_username = 2;
+}
+
+message UserChangeUsernameResponse {
+  bytes new_username = 1;
+}
