@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package passmanager.user.v0;
+
+import "passmanager/common/v0/error.proto";
+
+message UserRegisterRequest {
+  bytes new_username = 1;
+  bytes srp_salt = 2;
+  bytes srp_verifier = 3;
+  bytes master_key_salt = 4;
+}
+
+message UserRegisterResponse {
+  bool success = 1;
+
+  oneof result {
+    Success success_data = 2;
+    passmanager.common.v0.Failure failure_data = 3;
+  }
+
+  message Success {
+    bytes username_hash = 1;
+  }
+}
