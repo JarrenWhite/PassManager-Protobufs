@@ -13,7 +13,8 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
     ├── common
     │   │
     │   └── v0
-    │       └── error.proto
+    │       ├── error.proto
+    │       └── session.proto
     │
     └── user
         │
