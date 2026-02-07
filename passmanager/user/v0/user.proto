@@ -3,20 +3,31 @@ syntax = "proto3";
 package passmanager.user.v0;
 
 import "passmanager/common/v0/error.proto";
+import "passmanager/common/v0/session.proto";
 
-message UserRegisterRequest {
+message Failure = passmanager.common.v0.Failure
+message SessionRequest = passmanager.common.v0.SessionRequest;
+message SessionResponse = passmanager.common.v0.SessionResponse;
+
+service User {
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+  rpc Rename (SessionRequest) returns (SessionResponse);
+  rpc Delete (SessionRequest) returns (SessionResponse);
+}
+
+message RegisterRequest {
   bytes new_username = 1;
   bytes srp_salt = 2;
   bytes srp_verifier = 3;
   bytes master_key_salt = 4;
 }
 
-message UserRegisterResponse {
+message RegisterResponse {
   bool success = 1;
 
   oneof result {
     Success success_data = 2;
-    passmanager.common.v0.Failure failure_data = 3;
+    Failure failure_data = 3;
   }
 
   message Success {
