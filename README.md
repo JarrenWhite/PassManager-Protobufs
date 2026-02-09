@@ -16,6 +16,12 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
     │       ├── error.proto
     │       └── session.proto
     │
+    ├── password
+    │   │
+    │   └── v0
+    │       ├── password_payloads.proto
+    │       └── password.proto
+    │
     └── user
         │
         └── v0
