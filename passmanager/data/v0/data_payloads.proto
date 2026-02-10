@@ -46,3 +46,13 @@ message DataGetResponse {
   bytes entry_name = 3;
   bytes entry_data = 4;
 }
+
+message DataListRequest {
+  bytes username_hash = 1;
+}
+
+message DataListResponse {
+  bytes username_hash = 1;
+  repeated bytes entry_name = 2;
+  repeated bytes entry_data = 3;
+}
