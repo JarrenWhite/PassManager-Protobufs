@@ -16,21 +16,27 @@ The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.c
     │       ├── error.proto
     │       └── secure.proto
     │
+    ├── data
+    │   │
+    │   └── v0
+    │       ├── data_payloads.proto
+    │       └── data.proto
+    │
     ├── password
     │   │
     │   └── v0
     │       ├── password_payloads.proto
     │       └── password.proto
     │
-    ├── user
+    ├── session
     │   │
     │   └── v0
-    │       ├── user_payloads.proto
-    │       └── user.proto
+    │       ├── session_payloads.proto
+    │       └── session.proto
     │
-    └── session
+    └── user
         │
         └── v0
-            ├── session_payloads.proto
-            └── session.proto
+            ├── user_payloads.proto
+            └── user.proto
 ```
