@@ -1,3 +1,19 @@
 syntax = "proto3";
 
 package passmanager.session.v0;
+
+message SessionDeleteRequest {
+
+}
+
+message SessionDeleteResponse {
+
+}
+
+message SessionClearRequest {
+
+}
+
+message SessionClearResponse {
+
+}
