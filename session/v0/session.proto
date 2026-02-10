@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package passmanager.session.v0;
+
+import "passmanager/common/v0/error.proto";
+import "passmanager/common/v0/secure.proto";
+
+message Failure = passmanager.common.v0.Failure
+message SecureRequest = passmanager.common.v0.SecureRequest;
+message SecureResponse = passmanager.common.v0.SecureResponse;

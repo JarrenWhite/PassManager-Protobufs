@@ -22,9 +22,15 @@ The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.c
     │       ├── password_payloads.proto
     │       └── password.proto
     │
-    └── user
+    ├── user
+    │   │
+    │   └── v0
+    │       ├── user_payloads.proto
+    │       └── user.proto
+    │
+    └── session
         │
         └── v0
-            ├── user_payloads.proto
-            └── user.proto
+            ├── session_payloads.proto
+            └── session.proto
 ```
