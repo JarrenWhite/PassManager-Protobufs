@@ -12,7 +12,7 @@ message SecureResponse = passmanager.common.v0.SecureResponse;
 service Session {
   rpc Start (SessionStartRequest) returns (SessionStartResponse)
   rpc Auth (SessionAuthRequest) returns (SessionAuthResponse)
-  rpc Delete (SessionDeleteRequest) returns (SessionDeleteResponse)
+  rpc Delete (SecureRequest) returns (SecureResponse)
   rpc Clean (SecureRequest) returns (SecureResponse)
 }
 
@@ -57,12 +57,4 @@ message SessionAuthResponse {
     string session_id = 1;
     bytes server_proof = 2;
   }
-}
-
-message SessionDeleteRequest {
-
-}
-
-message SessionDeleteResponse {
-
 }
