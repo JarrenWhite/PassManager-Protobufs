@@ -13,6 +13,7 @@ The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.c
     ├── common
     │   │
     │   └── v0
+    │       ├── entries.proto
     │       ├── error.proto
     │       └── secure.proto
     │

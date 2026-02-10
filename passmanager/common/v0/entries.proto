@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package passmanager.common.v0;
+
+message EntryName {
+  string name = 1;
+}
+
+message EntryData {
+  optional string website = 1;
+  optional string username = 2;
+  optional string password = 3;
+  optional string notes = 4;
+}
