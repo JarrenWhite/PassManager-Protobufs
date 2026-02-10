@@ -37,11 +37,26 @@ message SessionStartResponse {
 }
 
 message SessionAuthRequest {
-
+  bytes username_hash = 1;
+  string auth_id = 2;
+  bytes eph_val_a = 3;
+  bytes proof_val_m1 = 4;
+  int32 maximum_requests = 5;
+  int32 expiry_time = 6;
 }
 
 message SessionAuthResponse {
+  bool success = 1;
 
+  oneof result {
+    Success success_data = 2;
+    Failure failure_data = 3;
+  }
+
+  message Success {
+    string session_id = 1;
+    bytes server_proof = 2;
+  }
 }
 
 message SessionDeleteRequest {
