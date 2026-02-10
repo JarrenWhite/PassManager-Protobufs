@@ -3,17 +3,18 @@ syntax = "proto3";
 package passmanager.session.v0;
 
 message SessionDeleteRequest {
-
+  bytes username_hash = 1;
+  string session_id = 2;
 }
 
 message SessionDeleteResponse {
-
+  bytes username_hash = 1;
 }
 
 message SessionClearRequest {
-
+  bytes username_hash = 1;
 }
 
 message SessionClearResponse {
-
+  bytes username_hash = 1;
 }
