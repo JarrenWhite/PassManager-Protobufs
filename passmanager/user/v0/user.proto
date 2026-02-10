@@ -3,16 +3,16 @@ syntax = "proto3";
 package passmanager.user.v0;
 
 import "passmanager/common/v0/error.proto";
-import "passmanager/common/v0/session.proto";
+import "passmanager/common/v0/secure.proto";
 
 message Failure = passmanager.common.v0.Failure
-message SessionRequest = passmanager.common.v0.SessionRequest;
-message SessionResponse = passmanager.common.v0.SessionResponse;
+message SecureRequest = passmanager.common.v0.SecureRequest;
+message SecureResponse = passmanager.common.v0.SecureResponse;
 
 service User {
   rpc Register (RegisterRequest) returns (RegisterResponse);
-  rpc Rename (SessionRequest) returns (SessionResponse);
-  rpc Delete (SessionRequest) returns (SessionResponse);
+  rpc Rename (SecureRequest) returns (SecureResponse);
+  rpc Delete (SecureRequest) returns (SecureResponse);
 }
 
 message RegisterRequest {

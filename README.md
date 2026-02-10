@@ -1,6 +1,6 @@
 # Pass Manager Protobufs
 
-The Protobuf definitions for the [Pass Manager Server](https://github.com/JarrenWhite/PassManager-Server) APIs.
+The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.com/JarrenWhite/PassManager-Server) APIs.
 
 ## File Structure
 
@@ -14,7 +14,7 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
     │   │
     │   └── v0
     │       ├── error.proto
-    │       └── session.proto
+    │       └── secure.proto
     │
     ├── password
     │   │
@@ -22,9 +22,15 @@ The Protobuf definitions for the [Pass Manager Server](https://github.com/Jarren
     │       ├── password_payloads.proto
     │       └── password.proto
     │
-    └── user
+    ├── user
+    │   │
+    │   └── v0
+    │       ├── user_payloads.proto
+    │       └── user.proto
+    │
+    └── session
         │
         └── v0
-            ├── user_payloads.proto
-            └── user.proto
+            ├── session_payloads.proto
+            └── session.proto
 ```

@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package passmanager.session.v0;
+
+import "passmanager/common/v0/error.proto";
+import "passmanager/common/v0/secure.proto";
+
+message Failure = passmanager.common.v0.Failure
+message SecureRequest = passmanager.common.v0.SecureRequest;
+message SecureResponse = passmanager.common.v0.SecureResponse;
+
+service Session {
+  rpc Start (SessionStartRequest) returns (SessionStartResponse)
+  rpc Auth (SessionAuthRequest) returns (SessionAuthResponse)
+  rpc Delete (SecureRequest) returns (SecureResponse)
+  rpc Clean (SecureRequest) returns (SecureResponse)
+}
+
+message SessionStartRequest {
+  bytes username_hash = 1;
+}
+
+message SessionStartResponse {
+  bool success = 1;
+
+  oneof result {
+    Success success_data = 2;
+    Failure failure_data = 3;
+  }
+
+  message Success {
+    string auth_id = 1;
+    bytes srp_salt = 2;
+    bytes eph_public_b = 3;
+    bytes master_key_salt = 4;
+  }
+}
+
+message SessionAuthRequest {
+  bytes username_hash = 1;
+  string auth_id = 2;
+  bytes eph_val_a = 3;
+  bytes proof_val_m1 = 4;
+  int32 maximum_requests = 5;
+  int32 expiry_time = 6;
+}
+
+message SessionAuthResponse {
+  bool success = 1;
+
+  oneof result {
+    Success success_data = 2;
+    Failure failure_data = 3;
+  }
+
+  message Success {
+    string session_id = 1;
+    bytes server_proof = 2;
+  }
+}
