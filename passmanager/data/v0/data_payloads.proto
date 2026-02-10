@@ -12,3 +12,15 @@ message DataCreateResponse {
   bytes username_hash = 1;
   string entry_public_id = 2;
 }
+
+message DataEditRequest {
+  bytes username_hash = 1;
+  string entry_public_id = 2;
+  optional bytes entry_name = 3;
+  optional bytes entry_data = 4;
+}
+
+message DataEditResponse {
+  bytes username_hash = 1;
+  string entry_public_id = 2;
+}
