@@ -8,3 +8,11 @@ import "passmanager/common/v0/secure.proto";
 message Failure = passmanager.common.v0.Failure
 message SecureRequest = passmanager.common.v0.SecureRequest;
 message SecureResponse = passmanager.common.v0.SecureResponse;
+
+service Data {
+  rpc Create (SecureRequest) returns (SecureResponse);
+  rpc Edit (SecureRequest) returns (SecureResponse);
+  rpc Delete (SecureRequest) returns (SecureResponse);
+  rpc Get (SecureRequest) returns (SecureResponse);
+  rpc List (SecureRequest) returns (SecureResponse);
+}
