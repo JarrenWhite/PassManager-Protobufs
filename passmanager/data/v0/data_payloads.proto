@@ -24,3 +24,13 @@ message DataEditResponse {
   bytes username_hash = 1;
   string entry_public_id = 2;
 }
+
+message DataDeleteRequest {
+  bytes username_hash = 1;
+  string entry_public_id = 2;
+}
+
+message DataDeleteResponse {
+  bytes username_hash = 1;
+  string entry_public_id = 2;
+}
