@@ -8,3 +8,34 @@ import "passmanager/common/v0/secure.proto";
 message Failure = passmanager.common.v0.Failure
 message SecureRequest = passmanager.common.v0.SecureRequest;
 message SecureResponse = passmanager.common.v0.SecureResponse;
+
+service Session {
+  rpc Start (SessionStartRequest) returns (SessionStartResponse)
+  rpc Auth (SessionAuthRequest) returns (SessionAuthResponse)
+  rpc Delete (SessionDeleteRequest) returns (SessionDeleteResponse)
+  rpc Clean (SecureRequest) returns (SecureResponse)
+}
+
+message SessionStartRequest {
+
+}
+
+message SessionStartResponse {
+
+}
+
+message SessionAuthRequest {
+
+}
+
+message SessionAuthResponse {
+
+}
+
+message SessionDeleteRequest {
+
+}
+
+message SessionDeleteResponse {
+
+}
