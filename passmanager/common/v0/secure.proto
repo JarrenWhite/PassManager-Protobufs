@@ -6,13 +6,13 @@ import "passmanager/common/v0/error.proto";
 
 message Failure = passmanager.common.v0.Failure
 
-message SessionRequest {
+message SecureRequest {
   string session_id = 1;
   int request_number = 2;
   bytes encrypted_data = 3;
 }
 
-message SessionResponse {
+message SecureResponse {
   bool success = 1;
 
   oneof result {
