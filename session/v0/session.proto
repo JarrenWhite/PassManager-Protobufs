@@ -17,11 +17,23 @@ service Session {
 }
 
 message SessionStartRequest {
-
+  bytes username_hash = 1;
 }
 
 message SessionStartResponse {
+  bool success = 1;
 
+  oneof result {
+    Success success_data = 2;
+    Failure failure_data = 3;
+  }
+
+  message Success {
+    string auth_id = 1;
+    bytes srp_salt = 2;
+    bytes eph_public_b = 3;
+    bytes master_key_salt = 4;
+  }
 }
 
 message SessionAuthRequest {
