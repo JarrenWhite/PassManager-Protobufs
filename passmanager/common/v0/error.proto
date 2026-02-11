@@ -3,5 +3,30 @@ syntax = "proto3";
 package passmanager.common.v0;
 
 message Failure {
+  repeated Error = 1;
+}
 
+message Error {
+  string field = 1;
+  ErrorCode error_code = 2;
+  string error_details = 3;
+}
+
+enum ErrorCode {
+  UNSPECIFIED = 0;
+
+  RQS00 = 10;
+  RQS01 = 11;
+  RQS02 = 12;
+  RQS03 = 13;
+
+  SVR00 = 20;
+  SVR01 = 21;
+
+  GNR00 = 30;
+  GNR01 = 31;
+
+  OPR00 = 40;
+  OPR01 = 41;
+  OPR02 = 42;
 }
