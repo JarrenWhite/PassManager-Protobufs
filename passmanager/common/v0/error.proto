@@ -3,13 +3,13 @@ syntax = "proto3";
 package passmanager.common.v0;
 
 message Failure {
-  repeated Error = 1;
+  repeated Error error_list = 1;
 }
 
 message Error {
   string field = 1;
-  ErrorCode error_code = 2;
-  string error_details = 3;
+  ErrorCode code = 2;
+  string description = 3;
 }
 
 enum ErrorCode {
