@@ -2,6 +2,9 @@ syntax = "proto3";
 
 package passmanager.common.v0;
 
+message Health {
+}
+
 message Failure {
   repeated Error error_list = 1;
 }
