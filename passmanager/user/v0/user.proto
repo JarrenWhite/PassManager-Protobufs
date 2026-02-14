@@ -11,7 +11,7 @@ message SecureResponse = passmanager.common.v0.SecureResponse;
 
 service User {
   rpc Register (RegisterRequest) returns (RegisterResponse);
-  rpc Rename (SecureRequest) returns (SecureResponse);
+  rpc Username (SecureRequest) returns (SecureResponse);
   rpc Delete (SecureRequest) returns (SecureResponse);
 }
 
