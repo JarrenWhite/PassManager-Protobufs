@@ -11,10 +11,10 @@ message SessionDeleteResponse {
   bytes username_hash = 1;
 }
 
-message SessionClearRequest {
+message SessionCleanRequest {
   bytes username_hash = 1;
 }
 
-message SessionClearResponse {
+message SessionCleanResponse {
   bytes username_hash = 1;
 }
