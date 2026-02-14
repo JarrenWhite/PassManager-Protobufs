@@ -3,6 +3,7 @@ syntax = "proto3";
 package passmanager.common.v0;
 
 message Health {
+  bool health = 1;
 }
 
 message Failure {
