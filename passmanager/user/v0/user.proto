@@ -17,14 +17,14 @@ service User {
   rpc Health () returns (Health);
 }
 
-message RegisterRequest {
+message UserRegisterRequest {
   bytes new_username = 1;
   bytes srp_salt = 2;
   bytes srp_verifier = 3;
   bytes master_key_salt = 4;
 }
 
-message RegisterResponse {
+message UserRegisterResponse {
   bool success = 1;
 
   oneof result {
