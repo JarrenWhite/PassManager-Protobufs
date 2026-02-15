@@ -5,24 +5,26 @@ package passmanager.user.v0;
 import "passmanager/common/v0/error.proto";
 import "passmanager/common/v0/secure.proto";
 
+message Health = passmanager.common.v0.Health
 message Failure = passmanager.common.v0.Failure
 message SecureRequest = passmanager.common.v0.SecureRequest;
 message SecureResponse = passmanager.common.v0.SecureResponse;
 
 service User {
   rpc Register (RegisterRequest) returns (RegisterResponse);
-  rpc Rename (SecureRequest) returns (SecureResponse);
+  rpc Username (SecureRequest) returns (SecureResponse);
   rpc Delete (SecureRequest) returns (SecureResponse);
+  rpc Health () returns (Health);
 }
 
-message RegisterRequest {
+message UserRegisterRequest {
   bytes new_username = 1;
   bytes srp_salt = 2;
   bytes srp_verifier = 3;
   bytes master_key_salt = 4;
 }
 
-message RegisterResponse {
+message UserRegisterResponse {
   bool success = 1;
 
   oneof result {
