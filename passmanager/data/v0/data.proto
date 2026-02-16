@@ -5,16 +5,11 @@ package passmanager.data.v0;
 import "passmanager/common/v0/error.proto";
 import "passmanager/common/v0/secure.proto";
 
-message Health = passmanager.common.v0.Health
-message Failure = passmanager.common.v0.Failure
-message SecureRequest = passmanager.common.v0.SecureRequest;
-message SecureResponse = passmanager.common.v0.SecureResponse;
-
 service Data {
-  rpc Create (SecureRequest) returns (SecureResponse);
-  rpc Edit (SecureRequest) returns (SecureResponse);
-  rpc Delete (SecureRequest) returns (SecureResponse);
-  rpc Get (SecureRequest) returns (SecureResponse);
-  rpc List (SecureRequest) returns (SecureResponse);
-  rpc Health () returns (Health);
+  rpc Create (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Edit (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Delete (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Get (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc List (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Health (passmanager.common.v0.HealthResponse) returns (passmanager.common.v0.HealthResponse);
 }

@@ -5,17 +5,12 @@ package passmanager.session.v0;
 import "passmanager/common/v0/error.proto";
 import "passmanager/common/v0/secure.proto";
 
-message Health = passmanager.common.v0.Health
-message Failure = passmanager.common.v0.Failure
-message SecureRequest = passmanager.common.v0.SecureRequest;
-message SecureResponse = passmanager.common.v0.SecureResponse;
-
 service Session {
-  rpc Start (SessionStartRequest) returns (SessionStartResponse)
-  rpc Auth (SessionAuthRequest) returns (SessionAuthResponse)
-  rpc Delete (SecureRequest) returns (SecureResponse)
-  rpc Clean (SecureRequest) returns (SecureResponse)
-  rpc Health () returns (Health);
+  rpc Start (SessionStartRequest) returns (SessionStartResponse);
+  rpc Auth (SessionAuthRequest) returns (SessionAuthResponse);
+  rpc Delete (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Clean (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
+  rpc Health (passmanager.common.v0.HealthResponse) returns (passmanager.common.v0.HealthResponse);
 }
 
 message SessionStartRequest {
@@ -27,7 +22,7 @@ message SessionStartResponse {
 
   oneof result {
     Success success_data = 2;
-    Failure failure_data = 3;
+    passmanager.common.v0.Failure failure_data = 3;
   }
 
   message Success {
@@ -52,7 +47,7 @@ message SessionAuthResponse {
 
   oneof result {
     Success success_data = 2;
-    Failure failure_data = 3;
+    passmanager.common.v0.Failure failure_data = 3;
   }
 
   message Success {
