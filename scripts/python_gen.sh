@@ -5,6 +5,8 @@ set -eu
 BUILD_DIR="build"
 VENV_DIR="build/.venv"
 VERSION="${1:-v0}"
+PROTOBUF_VER="6.33.5"
+GRPC_TOOLS_VER="1.78.0"
 
 
 # Create Virtual Environment
@@ -18,7 +20,7 @@ fi
 python3 -m venv "$VENV_DIR"
 source "$VENV_DIR/bin/activate"
 pip install --upgrade pip
-pip install protobuf grpcio-tools
+pip install "protobuf==$PROTOBUF_VER" "grpcio-tools==$GRPC_TOOLS_VER"
 
 
 # Generate protobufs
