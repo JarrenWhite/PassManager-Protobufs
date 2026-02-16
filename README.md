@@ -2,11 +2,23 @@
 
 The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.com/JarrenWhite/PassManager-Server).
 
+## Generate Protobuf Files
+Scripts exist to generate the required protobuf files for certain languages.
+These can be found in the `scripts` directory.
+
+Currently supported languages include:
+- Python
+
+
 ## File Structure
 
 ```
 /
 ├── README.md
+|
+├── scripts
+|   |
+|   └── python_generator.sh
 │
 └── passmanager
     │
