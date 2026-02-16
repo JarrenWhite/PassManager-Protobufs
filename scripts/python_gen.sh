@@ -43,4 +43,9 @@ for proto_file in "${PROTO_FILES[@]}"; do
     --python_out="$out_dir" \
     --grpc_python_out="$out_dir" \
     "$proto_file"
+
+  find "$out_dir/passmanager" -type f -name "*_pb2*.py" -exec mv -t "$out_dir" {} +
+  rm -rf "$out_dir/passmanager"
 done
+
+deactivate
