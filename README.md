@@ -12,32 +12,32 @@ The Protobuf and gRPC definitions for the [Pass Manager Server](https://github.c
     │
     ├── common
     │   │
-    │   └── v#
+    │   └── \<version\>
     │       ├── entries.proto
     │       ├── error.proto
     │       └── secure.proto
     │
     ├── data
     │   │
-    │   └── v#
+    │   └── \<version\>
     │       ├── data_payloads.proto
     │       └── data.proto
     │
     ├── password
     │   │
-    │   └── v#
+    │   └── \<version\>
     │       ├── password_payloads.proto
     │       └── password.proto
     │
     ├── session
     │   │
-    │   └── v#
+    │   └── \<version\>
     │       ├── session_payloads.proto
     │       └── session.proto
     │
     └── user
         │
-        └── v#
+        └── \<version\>
             ├── user_payloads.proto
             └── user.proto
 ```
