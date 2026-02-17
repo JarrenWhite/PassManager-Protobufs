@@ -2,7 +2,11 @@ syntax = "proto3";
 
 package passmanager.common.v0;
 
-message Health {
+message HealthRequest {
+  bool health = 1;
+}
+
+message HealthResponse {
   bool health = 1;
 }
 
