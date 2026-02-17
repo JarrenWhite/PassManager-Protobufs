@@ -27,32 +27,32 @@ Currently supported languages include:
     │
     ├── common
     │   │
-    │   └── \<version\>
+    │   └── <version>
     │       ├── entries.proto
     │       ├── error.proto
     │       └── secure.proto
     │
     ├── data
     │   │
-    │   └── \<version\>
+    │   └── <version>
     │       ├── data_payloads.proto
     │       └── data.proto
     │
     ├── password
     │   │
-    │   └── \<version\>
+    │   └── <version>
     │       ├── password_payloads.proto
     │       └── password.proto
     │
     ├── session
     │   │
-    │   └── \<version\>
+    │   └── <version>
     │       ├── session_payloads.proto
     │       └── session.proto
     │
     └── user
         │
-        └── \<version\>
+        └── <version>
             ├── user_payloads.proto
             └── user.proto
 ```
