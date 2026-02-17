@@ -10,6 +10,8 @@ Results are placed into a build folder.
 Currently supported languages include:
 - Python
 
+> Note: It is recommended that you take and adjust these scripts for your own environment, particularly updating the protobuf and grpc tools version numbers.
+
 
 ## File Structure
 
