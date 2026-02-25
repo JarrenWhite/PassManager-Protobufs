@@ -7,6 +7,7 @@ VENV_DIR="build/.venv"
 VERSION="${1:-v0}"
 PROTOBUF_VER="6.33.5"
 GRPC_TOOLS_VER="1.78.0"
+MYPY_PROTOBUF_VER="5.0.0"
 
 
 # Create Virtual Environment
@@ -20,7 +21,7 @@ fi
 python3 -m venv "$VENV_DIR"
 source "$VENV_DIR/bin/activate"
 pip install --upgrade pip
-pip install "protobuf==$PROTOBUF_VER" "grpcio-tools==$GRPC_TOOLS_VER"
+pip install "protobuf==$PROTOBUF_VER" "grpcio-tools==$GRPC_TOOLS_VER" "mypy-protobuf==$MYPY_PROTOBUF_VER"
 
 
 # Generate protobufs
@@ -42,6 +43,7 @@ for proto_file in "${PROTO_FILES[@]}"; do
     -I=. \
     --python_out="$BUILD_DIR" \
     --grpc_python_out="$BUILD_DIR" \
+    --mypy_out="$BUILD_DIR" \
     "${PROTO_FILES[@]}"
 done
 
