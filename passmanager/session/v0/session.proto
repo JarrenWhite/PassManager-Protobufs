@@ -10,7 +10,7 @@ service Session {
   rpc Auth (SessionAuthRequest) returns (SessionAuthResponse);
   rpc Delete (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
   rpc Clean (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
-  rpc Health (passmanager.common.v0.HealthResponse) returns (passmanager.common.v0.HealthResponse);
+  rpc Health (passmanager.common.v0.HealthRequest) returns (passmanager.common.v0.HealthResponse);
 }
 
 message SessionStartRequest {
