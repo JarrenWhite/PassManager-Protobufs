@@ -11,5 +11,5 @@ service Data {
   rpc Delete (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
   rpc Get (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
   rpc List (passmanager.common.v0.SecureRequest) returns (passmanager.common.v0.SecureResponse);
-  rpc Health (passmanager.common.v0.HealthResponse) returns (passmanager.common.v0.HealthResponse);
+  rpc Health (passmanager.common.v0.HealthRequest) returns (passmanager.common.v0.HealthResponse);
 }
