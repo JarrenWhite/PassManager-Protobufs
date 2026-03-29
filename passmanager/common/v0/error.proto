@@ -36,4 +36,5 @@ enum ErrorCode {
   OPR00 = 40;
   OPR01 = 41;
   OPR02 = 42;
+  OPR03 = 43;
 }
