@@ -54,7 +54,6 @@ message DataListRequest {
 message DataListResponse {
   bytes username_hash = 1;
   repeated EntryDetails entry_details = 2;
-  repeated bytes entry_data = 3;
 
   message EntryDetails {
     string entry_public_id = 1;
