@@ -27,8 +27,8 @@ message SessionStartResponse {
 
   message Success {
     string public_id = 1;
-    bytes srp_salt = 2;
-    bytes eph_public_b = 3;
+    bytes eph_public_b = 2;
+    bytes srp_salt = 3;
     bytes master_key_salt = 4;
   }
 }
