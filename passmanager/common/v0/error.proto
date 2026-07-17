@@ -29,6 +29,7 @@ enum ErrorCode {
 
   SVR00 = 20;
   SVR01 = 21;
+  SVR02 = 22;
 
   GNR00 = 30;
   GNR01 = 31;
