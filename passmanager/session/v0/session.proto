@@ -51,7 +51,7 @@ message SessionAuthResponse {
   }
 
   message Success {
-    string session_id = 1;
+    string public_id = 1;
     bytes server_proof = 2;
   }
 }
